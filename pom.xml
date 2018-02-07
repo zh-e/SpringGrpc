@@ -12,6 +12,7 @@
     <modules>
         <module>client</module>
         <module>service</module>
+        <module>transfer</module>
     </modules>
 
     <dependencies>

@@ -1,4 +1,4 @@
-package service;
+package transfer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,13 +6,13 @@ import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletCont
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 
 @SpringBootApplication
-public class ServiceApplication implements EmbeddedServletContainerCustomizer {
+public class TransferApplication implements EmbeddedServletContainerCustomizer {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceApplication.class, args);
+        SpringApplication.run(TransferApplication.class, args);
     }
 
     public void customize(ConfigurableEmbeddedServletContainer configurableEmbeddedServletContainer) {
-        configurableEmbeddedServletContainer.setPort(8888);
+        configurableEmbeddedServletContainer.setPort(8889);
     }
 }
