@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package= "client.grpc";
+option java_outer_classname = "HelloClientServiceData";
+
+message HelloRequest {
+    string Name = 1;
+}
+
+message HelloResponse {
+    string result = 1;
+}
+
+service HelloClientService {
+    rpc helloClient(HelloRequest) returns(HelloResponse){}
+}
+
+

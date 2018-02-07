@@ -11,4 +11,14 @@
 
     <artifactId>service</artifactId>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>SpringGrpc</groupId>
+            <artifactId>client</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
 </project>
