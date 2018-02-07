@@ -1,0 +1,10 @@
+target/
+.idea
+*.iml
+.DS_Store
+/arcanist
+/libphutil
+
+.project
+.settings
+.classpath
