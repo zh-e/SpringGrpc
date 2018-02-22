@@ -1,14 +1,13 @@
 package service.impl;
 
 
-import client.grpc.HelloClientServiceData;
 import client.grpc.HelloClientServiceData.HelloRequest;
 import client.grpc.HelloClientServiceData.HelloResponse;
 import client.grpc.HelloClientServiceGrpc;
-import com.google.common.util.concurrent.ListenableFuture;
-import com.google.common.util.concurrent.ListenableFutureTask;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 
+@Service
 public class HelloClientImpl extends HelloClientServiceGrpc.AbstractHelloClientService {
 
     @Override
@@ -18,7 +17,7 @@ public class HelloClientImpl extends HelloClientServiceGrpc.AbstractHelloClientS
     }
 
     public HelloResponse helloClient(HelloRequest request) {
-        HelloResponse response = HelloResponse.newBuilder().build();
+        HelloResponse response = HelloResponse.newBuilder().setResult(request.getName()+"rrr").build();
 
         return response;
 
